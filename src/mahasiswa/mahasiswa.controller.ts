@@ -7,10 +7,12 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { createMahasiswaDto } from './dto/create.dto';
 import { updateMahasiswaDto } from './dto/update.dto';
 import { MahasiswaService } from './mahasiswa.service';
 
+@ApiTags('Mahasiswa')
 @Controller('mahasiswa')
 export class MahasiswaController {
   constructor(private readonly mahasiswaService: MahasiswaService) {}
